@@ -292,6 +292,10 @@ a.link-header {
   margin-right: 30px;
 }
 
+.adv-list-icon {
+  background-color: var(--light-color-fon);
+}
+
 /*------------- TEAM SECTION---------------------- */
 
 .team-section {
