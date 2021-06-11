@@ -5,7 +5,7 @@
   --accent-color: #2196f3;
   --main-font-family: 'Roboto', sans-serif;
   --main-font-style: normal;
-  --accent-font-family: 'Raleway', sans-serif;
+  --accent-font-family: 'Raleway', 'Arial', 'Helvetica', sans-serif;
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
   --color-button-list-btn: #f5f4fa;
   --dark-background-color: #188ce8;
@@ -14,6 +14,7 @@
   --main-logo-color: #000000;
   --card-border-color: #eeeeee;
   --icon-fill: #afb1b8;
+  --icon-dark-theme: rgba(255, 255, 255, 0.1);
 }
 
 /* -------------- СТИЛИЗАЦИЯ ДЛЯ ВСЕХ---------------------------------------- */
@@ -62,12 +63,12 @@ img {
 
 /* -------------- СТИЛИЗАЦИЯ ЛОГОТИП---------------------------------------- */
 
-.logo,
-.logo-footer {
+a.logo.link,
+a.logo-footer.link {
   font-family: var(--accent-font-family);
-  font-weight: bold;
-  line-height: 1.192;
+  font-weight: 700;
   font-size: 26px;
+  line-height: 1.192;
   letter-spacing: 0.03em;
 }
 
@@ -99,6 +100,10 @@ img {
 a.link-header {
   padding-top: 32px;
   padding-bottom: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 /*   */
 
@@ -111,10 +116,6 @@ a.link-header {
   display: flex;
   padding-left: 0;
   color: var(--title-text-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.02em;
 }
 
 .nav-list-link:not(:last-child) {
@@ -292,10 +293,6 @@ a.link-header {
   margin-right: 30px;
 }
 
-.adv-list-icon {
-  background-color: var(--light-color-fon);
-}
-
 /*------------- TEAM SECTION---------------------- */
 
 .team-section {
@@ -333,6 +330,7 @@ a.link-header {
 .team-list-item-name {
   color: var(--title-text-color);
   font-weight: 500;
+  margin-bottom: 10px;
 }
 .team-list-item-position {
   margin-bottom: 16px;
@@ -341,7 +339,7 @@ a.link-header {
 .team-list-item-data {
   width: 270px;
   padding-top: 30px;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
   text-align: center;
 }
 
@@ -390,6 +388,7 @@ a.link-header {
 .btn-main {
   background-color: var(--accent-color);
   color: var(--white-color);
+  cursor: pointer;
 }
 
 .button-list-btn:hover,
@@ -492,16 +491,17 @@ a.link-header {
   fill: var(--main-text-color);
 }
 
-.mail-phone-icon:nth-child(1) {
+.mail .mail-phone-icon {
   width: 16px;
   height: 12px;
 }
-.mail-phone-icon:nth-child(2) {
+
+.phone .mail-phone-icon {
   width: 10px;
   height: 16px;
 }
 
-.contacts-link-icon {
+.mail-phone-icon {
   margin-right: 10px;
 }
 
@@ -535,11 +535,20 @@ li.contacts-list-item > a.phone::before {
 
 /* advantage-list */
 
-.adv-icon {
+.adv-list-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 270px;
   height: 120px;
   margin-bottom: 30px;
-  /* background-color: teal; */
+  background-color: var(--light-color-fon);
+}
+
+.adv-icon {
+  display: block;
+  width: 70px;
+  height: 70px;
 }
 
 /* через псевдо-элемент */
@@ -608,6 +617,7 @@ li.contacts-list-item > a.phone::before {
 .clients-link {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 170px;
   height: 92px;
   border: 1px solid var(--icon-fill);
@@ -626,6 +636,8 @@ li.contacts-list-item > a.phone::before {
 
 .clients-icon {
   fill: var(--icon-fill);
+  width: 106px;
+  height: 60px;
 }
 
 /* footer social icons */
@@ -637,10 +649,12 @@ li.contacts-list-item > a.phone::before {
   line-height: 100%;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 
 .contacts-footer {
@@ -650,4 +664,8 @@ li.contacts-list-item > a.phone::before {
 .dark-bcg-icon:hover .social-icon,
 .dark-bcg-icon:focus .social-icon {
   fill: var(--white-color);
+}
+
+.dark-bcg-icon {
+  background-color: var(--icon-dark-theme);
 }
