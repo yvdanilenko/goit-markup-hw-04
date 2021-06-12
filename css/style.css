@@ -61,6 +61,10 @@ img {
   height: auto;
 }
 
+header {
+  display: block;
+}
+
 /* -------------- СТИЛИЗАЦИЯ ЛОГОТИП---------------------------------------- */
 
 a.logo.link,
@@ -70,6 +74,8 @@ a.logo-footer.link {
   font-size: 26px;
   line-height: 1.192;
   letter-spacing: 0.03em;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .logo {
@@ -98,6 +104,8 @@ a.logo-footer.link {
 }
 
 a.link-header {
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 500;
@@ -114,7 +122,9 @@ a.link-header {
 
 .nav-list {
   display: flex;
-  padding-left: 0;
+  align-items: center;
+
+  margin-left: auto;
   color: var(--title-text-color);
 }
 
@@ -125,7 +135,7 @@ a.link-header {
 .contacts-list {
   display: flex;
   margin-left: auto;
-
+  align-items: center;
   padding-left: 0px;
 }
 
@@ -339,11 +349,12 @@ a.link-header {
 .team-list-item-data {
   width: 270px;
   padding-top: 30px;
-  /* padding-bottom: 30px; */
+  padding-bottom: 30px;
   text-align: center;
 }
 
 .clients-section {
+  padding-top: 94px;
   padding-bottom: 94px;
 }
 
@@ -410,7 +421,8 @@ a.link-header {
   border-bottom: 1px solid #eeeeee;
 }
 
-.projects-list-item:hover {
+.projects-list-item-link:hover,
+.projects-list-item-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -505,8 +517,8 @@ a.link-header {
   margin-right: 10px;
 }
 
-.contacts-list-item:hover .mail-phone-icon,
-.contacts-list-item:focus .mail-phone-icon {
+.link-header:hover .mail-phone-icon,
+.link-header:focus .mail-phone-icon {
   fill: var(--accent-color);
 }
 
