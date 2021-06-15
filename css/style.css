@@ -74,8 +74,6 @@ a.logo-footer.link {
   font-size: 26px;
   line-height: 1.192;
   letter-spacing: 0.03em;
-  padding-top: 24px;
-  padding-bottom: 25px;
 }
 
 .logo {
@@ -193,12 +191,9 @@ a.link-header {
 
   margin-left: auto;
   margin-right: auto;
-}
-.hero-section .container {
-  text-align: center;
-
   padding-top: 200px;
   padding-bottom: 200px;
+  text-align: center;
 }
 
 .hero-title {
@@ -347,9 +342,7 @@ a.link-header {
 }
 
 .team-list-item-data {
-  width: 270px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px;
   text-align: center;
 }
 
@@ -680,4 +673,8 @@ li.contacts-list-item > a.phone::before {
 
 .dark-bcg-icon {
   background-color: var(--icon-dark-theme);
+}
+
+.footer-social-list-item:not(:last-child) {
+  margin-right: 10px;
 }
